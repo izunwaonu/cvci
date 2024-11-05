@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kindergarten Lesson on CVC Words</title>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f4f4f4;
+        margin: 0;
+      }
+      
+      .section {
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        background-color: #fff;
+        max-width: 100%;
+        width: 90%;
+        box-sizing: border-box;
+      }
+      
+      .section img, .section video {
+        width: 50%px;
+        max-width: 100%;
+        display: block;
+        margin: 10px auto;
+      }
+      
+      .section button, .game-image {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 5px;
+      }
+      
+      .game-image {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .flip-card {
+        perspective: 1000px;
+        display: inline-block;
+        margin: 10px;
+      }
+      
+      .flip-card-inner {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+      .vd{
+        font-size: 3rem;
+        font-weight: bold;
+        color: #4CAF50;
+      }
+      
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .flip-card-back {
+        background-color: #f8f8f8;
+        transform: rotateY(180deg);
+      }
+      
+      .flip-card.flipped .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      /* Media Queries for Responsiveness */
+      @media (max-width: 768px) {
+        .section {
+          padding: 15px;
+          margin: 15px;
+        }
+      
+        .flip-card {
+          width: 80px;
+        }
+      
+        .section button, .game-image {
+          padding: 8px 15px;
+          font-size: 0.9em;
+        }
+      
+        .flip-card-inner {
+          width: 80px;
+          height: 80px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .section {
+          padding: 10px;
+          margin: 10px;
+        }
+      
+        .flip-card {
+          width: 70px;
+        }
+      
+        .section button, .game-image {
+          padding: 6px 10px;
+          font-size: 0.8em;
+        }
+      
+        .flip-card-inner {
+          width: 70px;
+          height: 70px;
+        }
+      
+        h2 {
+          font-size: 1.2em;
+        }
+      
+        p {
+          font-size: 0.9em;
+        }
+      }
+      /* General video styling */
+.lesson-video {
+    width: 100%;
+    max-width: 300px; /* Set the maximum width for videos */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Center the video */
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .lesson-video {
+      max-width: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .lesson-video {
+      max-width: 150px;
+    }
+  }
+  
+      
+  </style>
+</head>
+<body>
+
+  <!-- Section 1: Objectives -->
+  <div class="section" id="section1">
+    <h2>Lesson Objectives and Key Language</h2>
+
+    <p> Introduce CVC words with the middle vowel sound "i."
+        Help children recognize the "i" sound in familiar CVC words.
+        Encourage sound recognition through hands-on and movement-based activities.</p>
+    <p><strong>Key languages:</strong> pig, sit, lip, kit, win, zip, bin, tin</p>
+  </div>
+
+  <!-- Section 2: Word Display with Images -->
+  <div class="section" id="section2">
+    <h2>Click on a Word to See its Image</h2>
+    <div id="wordsContainer">
+      <button onclick="showImage('pig')">Pig</button>
+      <button onclick="showImage('sit')">Sit</button>
+      <button onclick="showImage('lip')">Lip</button>
+      <button onclick="showImage('kit')">Kit</button>
+      <button onclick="showImage('win')">Win</button>
+      <button onclick="showImage('zip')"> Zip </button>
+      <button onclick="showImage('bin')">Bin</button>
+      <button onclick="showImage('tin')">Tin</button>
+    </div>
+    <img id="wordImage" src="" alt="Word Image">
+  </div>
+
+  <!-- Section 3: Words with Video -->
+  <div class="section" id="section3">
+    <h2>Words with Videos</h2>
+    <div id="videoContainer">
+      <p class="vd">Pig <video controls class="lesson-video"  width="400"><source src="videos/pig.mp4" type="video/mp4"></video></p>
+      <p class="vd">Sit <video controls class="lesson-video" width="400"><source src="videos/sit.mp4" type="video/mp4"></video></p>
+      <p class="vd">Lip <video controls class="lesson-video" width="400"><source src="videos/lip.mp4" type="video/mp4"></video></p>
+      <p class="vd">Win <video controls class="lesson-video" width="400"><source src="videos/win.mp4" type="video/mp4"></video></p>
+      <p class="vd">Zip <video controls class="lesson-video" width="400"><source src="videos/zip.mp4" type="video/mp4"></video></p>
+      <p class="vd">Bin <video controls class="lesson-video" width="400"><source src="videos/bin.mp4" type="video/mp4"></video></p>
+      <p class="vd">Tin <video controls class="lesson-video" width="400"><source src="videos/tin.mp4" type="video/mp4"></video></p>
+      <!-- Repeat similarly for other words -->
+    </div>
+  </div>
+
+  <!-- Section 4: Word with Sounds -->
+  <div class="section" id="section4">
+    <h2>Words with Sounds</h2>
+    <p>Pig: /p-i-g/</p>
+    <p>Sit: /s-i-t/</p>
+    <p>Lip: /l-i-p/</p>
+    <p>Kit: /k-i-t/</p>
+    <p>Win: /w-i-n/</p>
+    <p>Zip: /z-i-p/</p>
+    <p>Bin: /b-i-n/</p>
+    <p>Tin: /t-i-n/</p>
+  </div>
+
+  <!-- Section 5: Guess the Word Game -->
+  <div class="section" id="section5">
+    <h2>Guess the Word and Sound Game</h2>
+    <div class="game-container">
+      <div class="flip-card" onclick="flipCard(this, 'pig', '/p-i-g/')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/pig.png" alt="Pig Image" class="game-image">
+          </div>
+          <div class="flip-card-back">
+            <p>Pig</p>
+            <p>/p-i-g/</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="flipCard(this, 'tin', '/t-i-n/')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/tin.png" alt="Pig Image" class="game-image">
+          </div>
+          <div class="flip-card-back">
+            <p>Tin</p>
+            <p>/t-i-n/</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="flipCard(this, 'bin', '/b-i-n/')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/bin.png" alt="Pig Image" class="game-image">
+          </div>
+          <div class="flip-card-back">
+            <p>Bin</p>
+            <p>/b-i-n/</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="flipCard(this, 'sit', '/s-i-t/')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/sit.png" alt="Sit Image" class="game-image">
+          </div>
+          <div class="flip-card-back">
+            <p>Sit</p>
+            <p>/s-i-t/</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="flipCard(this, 'lip', '/l-i-p/')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/lip.png" alt="Sit Image" class="game-image">
+          </div>
+          <div class="flip-card-back">
+            <p>Lip</p>
+            <p>/l-i-p/</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="flipCard(this, 'kit', '/k-i-t/')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/kit.png" alt="Sit Image" class="game-image">
+          </div>
+          <div class="flip-card-back">
+            <p>Kit</p>
+            <p>/k-i-t/</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="flipCard(this, 'win', '/w-i-n/')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/win.png" alt="Sit Image" class="game-image">
+          </div>
+          <div class="flip-card-back">
+            <p>Win</p>
+            <p>/w-i-n/</p>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" onclick="flipCard(this, 'tin', '/t-i-n/')">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="images/tin.png" alt="Sit Image" class="game-image">
+          </div>
+          <div class="flip-card-back">
+            <p>Tin</p>
+            <p>/t-i-n/</p>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat similarly for other words -->
+    </div>
+  </div>
+
+  <script>
+    // Section 2: Show word image on click
+    function showImage(word) {
+      const img = document.getElementById("wordImage");
+      img.src = `images/${word}.png`;
+      img.style.display = "block";
+    }
+
+    // Section 5: Flip card on click
+    function flipCard(card, word, sound) {
+      card.classList.toggle("flipped");
+    }
+  </script>
+
+</body>
+</html>
